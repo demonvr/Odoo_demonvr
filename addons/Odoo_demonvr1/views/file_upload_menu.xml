@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<odoo>
+
+  <record id="file_upload_form_view" model="ir.ui.view">
+    <field name="name">file_upload.form.view</field>
+    <field name="model">file.upload</field>
+    <field name="arch" type="xml">
+      <form string="File Upload">
+        <sheet>
+          <group col="2">
+            <group>
+              <header>
+                <button name="action_tree_view" string="Tree View" type="object"/>
+              </header>
+              <field name="file" filename="name"/>
+              <field name="name" invisible="1"/>
+              <button name="action_upload_file" string="Upload" type="object" class="oe_highlight oe_left"/>
+              <field name="url" widget="url"/>
+            </group>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record model="ir.actions.act_window" id="file_upload_task">
+      <field name="name">Admission Register</field>
+      <field name="res_model">file.upload</field>
+      <field name="view_mode">form</field>
+  </record>
+
+  <menuitem id="file_upload_root"
+    name="File Upload"
+    web_icon="file_upload,static/description/icon.png"
+    action="file_upload_task" />
+
+</odoo>
