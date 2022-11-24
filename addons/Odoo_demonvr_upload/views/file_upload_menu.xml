@@ -9,9 +9,6 @@
         <sheet>
           <group col="2">
             <group>
-              <header>
-                <button name="action_tree_view" string="Tree View" type="object"/>
-              </header>
               <field name="file" filename="name"/>
               <field name="name" invisible="1"/>
               <button name="action_upload_file" string="Upload" type="object" class="oe_highlight oe_left"/>
