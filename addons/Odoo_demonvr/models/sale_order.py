@@ -19,7 +19,7 @@ class SaleOrder(models.Model):
     def _check_test_field(self):
         if self.test_field:
             if len(self.test_field) > 50:
-                raise ValidationError("Длина текста должна быть меньше 50 символов!" + str(len(self.test_field)))
+                raise ValidationError("Длина текста должна быть меньше 50 символов!")
 
 
     @api.depends("date_order", "amount_total")
